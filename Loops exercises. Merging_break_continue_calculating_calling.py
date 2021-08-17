@@ -62,3 +62,5 @@ print(squares)
 # Digits in 3th:
 cubes = [cubes ** 3 for cubes in single_digits]
 print(cubes) 
+
+# test 2
