@@ -28,6 +28,6 @@ print("Total Revenue: ", total_revenue)
 average_daily_revenue = total_revenue / 7
 print(average_daily_revenue)
 
-# Advertising haircuts under 30$. Taking the new prices of hairstyles chechking if the cost less than 30$ and printing out the names of the hairstyles:
+# Advertising haircuts under 30$. Taking the new prices of hairstyles and checking if they cost less than 30$. Printing out the names of the hairstyles under 30$:
 cuts_under_30 = [hairstyles[i] for i in range(len(new_prices)) if new_prices[i] < 30]
 print(cuts_under_30)
