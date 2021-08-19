@@ -32,3 +32,34 @@ def deduct_expense(budget, expense):
   return budget - expense 
 new_budget_after_shirt = deduct_expense(current_budget, shirt_expense)
 print_remaining_budget(new_budget_after_shirt)
+
+# Creating af function which returns the top travel destinations in Italy:
+def top_tourist_locations_italy():
+  first = "Rome" 
+  second = "Venice"
+  third = "Florence"
+  return first, second, third
+
+most_popular1, most_popular2, most_popular3 = top_tourist_locations_italy()
+print(most_popular1)
+print(most_popular2)
+print(most_popular3)
+
+# Creating TripPlanner v1.0
+def trip_planner_welcome(name):
+  print("Welcome to tripplanner v1.0 " + name)
+
+def destination_setup(origin, destination, estimated_time, mode_of_transport = "Car"):
+  print("Your trip starts off in " + origin)
+  print("And you are traveling to " + destination)
+  print("You will be traveling by " + mode_of_transport)
+  print("It will take approximately " + str(estimated_time) + " hours")
+
+def estimated_time_rounded(estimated_time):
+  rounded_time = round(estimated_time)
+  return rounded_time
+
+# Running program
+trip_planner_welcome("Simon ")
+estimate = estimated_time_rounded(10.77)
+destination_setup(" Silkeborg ", "København ", estimate, "Car")
