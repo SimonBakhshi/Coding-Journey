@@ -18,3 +18,17 @@ def trip_planner(first_destination, second_destination, final_destination = "Cod
   print("First, we will stop in " + first_destination + ",then " + second_destination + " and lastly " + final_destination)
 
 trip_planner("Brooklyn", "Queens")
+
+# Creating a function which deducts the expenses of the users starting budget:
+current_budget = 3500.75
+
+def print_remaining_budget(budget):
+  print("Your remaining budget is: $" + str(budget))
+
+print_remaining_budget(current_budget)
+
+shirt_expense = 9
+def deduct_expense(budget, expense):
+  return budget - expense 
+new_budget_after_shirt = deduct_expense(current_budget, shirt_expense)
+print_remaining_budget(new_budget_after_shirt)
