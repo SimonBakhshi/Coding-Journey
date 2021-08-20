@@ -109,3 +109,24 @@ def get_work(mass, acceleration, distance):
 train_work = get_work(train_mass, train_acceleration, train_distance)
 print("The GE train does", train_work, "Joules of work over", train_distance, "meters.")
 
+# Function calculating base to the power of exponent. The program returns boolean values whether the number is greater or lesser than 5000.
+def large_power(base, exponent):
+  if base ** exponent > 5000:
+    return True
+  else: 
+    return False
+    
+print(large_power(2, 13))
+print(large_power(2, 12))
+
+# Writing a program which calculates whether the spendings of a customer surpasses their budget.
+def over_budget(budget, food_bill, electricity_bill, internet_bill, rent):
+  if food_bill + electricity_bill + internet_bill + rent > budget:
+    return True
+  else:
+    return False
+
+print(over_budget(100, 20, 30, 10, 40))
+print(over_budget(80, 20, 30, 10, 30))
+
+
