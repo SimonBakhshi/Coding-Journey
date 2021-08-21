@@ -169,6 +169,37 @@ def in_range(num, lower, upper):
 print(in_range(10, 10, 10))
 print(in_range(5, 10, 20))
 
+# Writing a functions which compares if your_name and my_name are ==. It return the input in Boolean values: 
+def same_name(your_name, my_name):
+  if your_name == my_name:
+    return True
+  else:
+    return False
+
+# Creating a contradictory function: In the example the input number cannot both be greater than and less than 0, that is a contradiction.  
+def always_false(num):
+  if num > 0 and num < 0:
+    return True
+  return False
+
+print(always_false(0))
+print(always_false(-1))
+print(always_false(1))
+
+# Creating a function which depending on a movies rating reccomends it to them or tells people to avoid it.
+def movie_review(rating):
+  if rating <= 5:
+    return "Avoid at all costs!"
+  elif rating < 9:
+    return "This one was fun."
+  else:
+    return "Outstanding!"
+    
+print(movie_review(9))
+print(movie_review(4))
+print(movie_review(6))
+
+
 
 
 
