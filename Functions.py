@@ -222,6 +222,32 @@ def append_size(lst):
 
 print(append_size([23, 42 ,67]))
 
+# This function adds the last two index values of lst together and appends the value to itself. It repeats the operation 2 more times and appends the calculated value of lst[-1] + lst[-2] to itself:
+def append_sum (lst):
+  lst.append(lst[-1] + lst[-2])
+  lst.append(lst[-1] + lst[-2])
+  lst.append(lst[-1] + lst[-2])
+  return lst
+  
+print(append_sum([1, 1, 2]))
+
+# This function returns the last index [-1] of the list which contains more elements. If both lists are equal in size it retuns the last index value of lst1:
+def larger_list(lst1, lst2):
+  if len(lst1) >= len(lst2):
+    return lst1[-1]
+  else:
+    return lst2[-1]
+
+print(larger_list([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+# This function counts the number of times the parameter item e.g. (Werthers orginal candy) appears on lst. It compares whether the count is greater than the value n e.g. (n = 3) and returns the answer in Boolean values:    
+def more_than_n(lst, item, n):
+  if lst.count(item) > n:
+    return True
+  else:
+    return False
+
+print(more_than_n([2, 4, 6, 2, 3, 2, 1, 2], 2, 3))
 
 
 
