@@ -169,14 +169,14 @@ def in_range(num, lower, upper):
 print(in_range(10, 10, 10))
 print(in_range(5, 10, 20))
 
-# Writing a function which compares if your_name and my_name are ==. It return the input in Boolean values: 
+# Writing a function which compares if your_name and my_name are ==. It returns the input in Boolean values: 
 def same_name(your_name, my_name):
   if your_name == my_name:
     return True
   else:
     return False
 
-# Creating a contradictory function: In the example the input number cannot both be greater than and less than 0, that is a contradiction.  
+# Creating a contradictory function: In the example the input number cannot both be greater than and less than 0, that is a contradiction:  
 def always_false(num):
   if num > 0 and num < 0:
     return True
@@ -186,7 +186,7 @@ print(always_false(0))
 print(always_false(-1))
 print(always_false(1))
 
-# Creating a function which depending on a movies rating reccomends it to them or tells people to avoid it.
+# Creating a function which depending on a movies rating reccomends it to them or tells people to avoid it:
 def movie_review(rating):
   if rating <= 5:
     return "Avoid at all costs!"
@@ -198,6 +198,29 @@ def movie_review(rating):
 print(movie_review(9))
 print(movie_review(4))
 print(movie_review(6))
+
+# Writing a function which compares the 3 numbers in the function def max_num(num1, num2, num3): and returns which number is the greater number. If there is a tie it returns "It's a tie!":
+def max_num(num1, num2, num3):
+  if num1 > num2 and num1 > num3:
+    return num1
+  elif num2 > num1 and num2 > num3:
+    return num2
+  elif num3 > num1 and num3 > num2:
+    return num3
+  else:
+    return "It's a tie!" 
+
+print(max_num(-10, 0, 10))
+print(max_num(-10, 5, -30))
+print(max_num(-5, -10, -10))
+print(max_num(2, 3, 3))
+
+# This function appends the index length of the list to itself. List + x index in list:
+def append_size(lst):
+  lst.append(len(lst))
+  return lst
+
+print(append_size([23, 42 ,67]))
 
 
 
