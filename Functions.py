@@ -169,7 +169,7 @@ def in_range(num, lower, upper):
 print(in_range(10, 10, 10))
 print(in_range(5, 10, 20))
 
-# Writing a functions which compares if your_name and my_name are ==. It return the input in Boolean values: 
+# Writing a function which compares if your_name and my_name are ==. It return the input in Boolean values: 
 def same_name(your_name, my_name):
   if your_name == my_name:
     return True
