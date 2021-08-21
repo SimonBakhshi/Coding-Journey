@@ -160,4 +160,15 @@ print(not_sum_to_ten(9,-1))
 print(not_sum_to_ten(9, 1))
 print(not_sum_to_ten(5,5))
 
+# Writing a program which checks whether num is greater than or equal to lower and if num is less than or equal to upper: 
+def in_range(num, lower, upper):
+  if num >= lower and num <= upper:
+    return True
+  return False
+
+print(in_range(10, 10, 10))
+print(in_range(5, 10, 20))
+
+
+
 
