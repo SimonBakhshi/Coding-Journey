@@ -257,11 +257,26 @@ def combine_sort(lst1, lst2):
 
 print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
 
-# This function returns a list from the parameter number to 100 by increments of 3. If the parameter number is > than 100 it returns an empty list.
+# This function returns a list from the parameter number to 100 by increments of 3. If the parameter number is > than 100 it returns an empty list:
 def every_three_nums(start):
  return list(range(start, 101, 3))
  
 print(every_three_nums(91))
+
+# This functions slices the indexes between the parameters start and end including the end index number itself: 
+def remove_middle(lst, start, end):
+  return lst[:start] + lst[end+1:]
+  
+print(remove_middle([4, 8, 15, 16, 23, 42], 1, 3))
+
+# This function counts the parameters item1 and item2 and compares which of the parameters appears on the list most times. It returns the parameter which shows up most times. If the parameters appear the same number of times the function returns the parameter item1: 
+def more_frequent_item(lst, item1, item2):
+  if lst.count(item1) >= lst.count(item2):
+    return item1
+  else:
+    return item2
+    
+print(more_frequent_item([2, 3, 3, 2, 3, 2, 3, 2, 3], 2, 3))
 
 
 
