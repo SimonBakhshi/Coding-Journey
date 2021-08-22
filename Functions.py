@@ -249,6 +249,21 @@ def more_than_n(lst, item, n):
 
 print(more_than_n([2, 4, 6, 2, 3, 2, 1, 2], 2, 3))
 
+# This function combines two lists and sorts them. It then returns the sorted list:
+def combine_sort(lst1, lst2):
+  unsorted = lst1 + lst2
+  sorted_list = sorted(unsorted)
+  return sorted_list
+
+print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+# This function returns a list from the parameter number to 100 by increments of 3. If the parameter number is > than 100 it returns an empty list.
+def every_three_nums(start):
+ return list(range(start, 101, 3))
+ 
+print(every_three_nums(91))
+
+
 
 
 
