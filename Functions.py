@@ -290,6 +290,16 @@ def double_index(lst, index):
     
 print(double_index([3, 8, -10, 12], 2))
 
+# This function finds the middle item from a list of values. this differs depending on whether there are an odd or even number of values on the list. If the list contain an odd number of elements the function returns the exact middle value of the list. If the list is even it returns the average of the middle two elements of the list:   
+def middle_element(lst):
+  if len(lst) % 2 == 0:
+     sum = lst[int(len(lst)/2)] + lst[int(len(lst)/2) -1]
+     return sum / 2
+  else: 
+    return lst[int(len(lst)/2)]
+
+print(middle_element([5, 2, -10, -4, 4, 5,]))
+
 
 
 
