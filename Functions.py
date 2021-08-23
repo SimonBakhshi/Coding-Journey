@@ -278,6 +278,18 @@ def more_frequent_item(lst, item1, item2):
     
 print(more_frequent_item([2, 3, 3, 2, 3, 2, 3, 2, 3], 2, 3))
 
+# This function checks if the index value is invalid compared with lst's length. If thats the case it returns lst. Otherwise it returns a new list called lst2 where the index parameter in the function is multiplied by 2: 
+def double_index(lst, index):
+  if index >= len(lst):
+    return lst
+  else:
+    lst2 = lst[0:index]
+    lst2.append(lst[index]*2)
+    lst2 = lst2 + lst[index+1:]
+    return lst2
+    
+print(double_index([3, 8, -10, 12], 2))
+
 
 
 
