@@ -300,6 +300,24 @@ def middle_element(lst):
 
 print(middle_element([5, 2, -10, -4, 4, 5,]))
 
+# This function loops through the parameter nums and checks whether the numbers in nums are divisible with 10. For every number divisible by 10 the counter is incremented. The function returns the count of how many numbers in nums are divisible by 10:
+def divisible_by_ten(nums):
+  count = 0
+  for number in nums:
+    if (number % 10 == 0):
+      count +=1
+  return count
+
+print(divisible_by_ten([20, 25, 30, 35, 40]))
+
+# This function concatenate "Hello, " with each name in the parameter names and appends the new string to the string names_and_greetings.  
+def add_greetings(names):
+  names_and_greetings = []
+  for name in names:
+    names_and_greetings.append("Hello, " + name)
+  return names_and_greetings
+   
+print(add_greetings(["Owen", "Max", "Sophie", "Joe"]))
 
 
 

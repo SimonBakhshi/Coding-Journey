@@ -63,4 +63,22 @@ print(squares)
 cubes = [cubes ** 3 for cubes in single_digits]
 print(cubes) 
 
-# test 2
+# Program that prints Hello is 1 is stored in spam, prints Howdy if 2 is stored in spam and prints Greetings if anything else is stored in spam:
+spam = ""
+if 1 == spam:
+  print("Hello")
+elif 2 == spam:
+  print("Howdy")
+else:
+  print("Greetings")
+
+  # A for loop printing numbers 0-9:
+  for i in range(10):
+    print(i)
+  
+  # A while loop printing number 0-9:
+  count = 0
+  while count < 10:
+    print(count)
+    count += 1
+  
