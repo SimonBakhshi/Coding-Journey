@@ -319,6 +319,20 @@ def add_greetings(names):
    
 print(add_greetings(["Owen", "Max", "Sophie", "Joe"]))
 
+# This function takes a number as a input value. It uses the try and exception handling to deal with possible problems with the program, if the users input isn't compatible with the function. Regardless whether the user enters a even or odd number, the function returns a sequence of numbers until it reaches the number one. Sooner or later the sequence will arrive at the number 1. This i due to the math used in the function. Even mathematicians aren't sure why it is the case:  
+def collatz(number):
+  if number % 2 == 0:
+    print(number // 2)
+    return number // 2
+  
+  elif number % 2 == 1:
+    result = 3 * number + 1
+    print(result)
+    return result
 
-
-
+try:  
+  n = input("Enter a number: ")
+  while n != 1:
+    n = collatz(int(n))
+except ValueError:
+  print("Please enter a number and not a letter my friend")

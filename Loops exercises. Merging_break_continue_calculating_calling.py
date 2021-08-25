@@ -63,7 +63,7 @@ print(squares)
 cubes = [cubes ** 3 for cubes in single_digits]
 print(cubes) 
 
-# Program that prints Hello is 1 is stored in spam, prints Howdy if 2 is stored in spam and prints Greetings if anything else is stored in spam:
+# Program that prints Hello if 1 is stored in spam, prints Howdy if 2 is stored in spam and prints Greetings if anything else is stored in spam:
 spam = ""
 if 1 == spam:
   print("Hello")
