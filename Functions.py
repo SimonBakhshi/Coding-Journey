@@ -321,6 +321,7 @@ print(add_greetings(["Owen", "Max", "Sophie", "Joe"]))
 
 # This function takes a number as a input value. It uses the try and exception handling to deal with possible problems with the program, if the users input isn't compatible with the function. Regardless whether the user enters a even or odd number, the function returns a sequence of numbers until it reaches the number one. Sooner or later the sequence will arrive at the number 1. This i due to the math used in the function. Even mathematicians aren't sure why it is the case:  
 import sys
+
 def collatz(number):
   if number % 2 == 0:
     print(number // 2)
@@ -330,7 +331,6 @@ def collatz(number):
     result = 3 * number + 1
     print(result)
     return result
-
 try:  
   n = input("Enter a number: ")
   while n != 1:
@@ -339,3 +339,16 @@ except KeyboardInterrupt:
   sys.exit()
 except ValueError:
   print("The program only accepts a positive integer my friend.")
+
+
+# #####
+# def delete_starting_evens(lst):
+#   for i, n in enumerate(lst):
+#     if n % 2 == 0:
+#       continue
+#     else:
+#       return lst[i:]
+#   return []
+
+# print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
+# print(delete_starting_evens([4, 8, 10]))
