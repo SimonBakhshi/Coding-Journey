@@ -72,13 +72,49 @@ elif 2 == spam:
 else:
   print("Greetings")
 
-  # A for loop printing numbers 0-9:
-  for i in range(10):
-    print(i)
+# A for loop printing numbers 0-9:
+for i in range(10):
+  print(i)
   
-  # A while loop printing number 0-9:
-  count = 0
-  while count < 10:
-    print(count)
-    count += 1
+# A while loop printing number 0-9:
+count = 0
+while count < 10:
+  print(count)
+  count += 1
   
+# Creating a list which stores user input using a while loop:
+# friend_names = []
+# while True:
+#   print("Please enter the name of friend " + str(len(friend_names) + 1 ) + " (Or enter nothing to stop.):")
+#   name = input()
+#   if name == "":
+#     break
+#   friend_names = friend_names + [name] # list concatenation
+# print("Friend names are:")
+# for name in friend_names:
+#   print("" + name)
+
+# This program lets a customer enter a computer game. If the computer game is on the list the program lets the customer know where they can buy the game. If the game is not on the list the program informs the customer the game is not available:   
+computer_games = [["Fifa", "25$"], ["Call of duty", "60$"], ["Fortnite", "10$"], ["Resident Evil", "15$"], ["Tony Hawks pro skater", "60$"], ["GTA 5", "20$"], ["Batman Arkham Knight", "5$"], ["Control", "30$"]]
+print("Welcome to Simon's Super Shelf. Enter a computer game and we will check if the game is in store:")
+name = input()
+for r in computer_games:
+  for c in r:
+#for i in range(len(computer_games)):
+    if name not in c:
+     print("Sorry but we do not have the game you entered") 
+    else:
+      print(name + " is on the shelf in our shop downtown. You can also buy the game in our online store.")
+      
+  
+    
+    
+    
+    
+    
+    # print("Do you want to now the price of the game?")
+#   input()
+#   if "yes":
+#     print("price")
+#   else:
+#     print("Maybe you are more interested in some other games?")

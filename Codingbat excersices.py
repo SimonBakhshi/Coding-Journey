@@ -20,6 +20,14 @@ def near_hundred(n):
   
 print(near_hundred(97))
 
+### List-1:
+
+# first_last6: 
+def first_last6(nums):
+  if nums[0] == 6 or nums[-1] == 6:
+    return True
+  return False
+
 ### Logic-1:
 
 # cigar_party:
