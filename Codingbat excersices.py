@@ -51,17 +51,43 @@ def rotate_left3(nums):
 # reverse3:
 def reverse3(nums):
   reversed_list = reversed(nums)
-  return list(reversed_list) 
+  return list(reversed_list)
+
+# max_end3:
+def max_end3(nums):
+  nums_0_largest = [nums[0]] * 3
+  nums_2_largest = [nums[2]] * 3
+  if nums[0] > nums[2]:
+    return nums_0_largest
+  else: 
+    return nums_2_largest  
 
 # sum2:
 def sum2(nums):
   if len(nums) >= 2:
     return nums[0] + nums[1]
-  elif len(nums) ==1:
+  elif len(nums) == 1:
     return nums[0]
   else:
     return 0
-   
+
+# middle_way:
+def middle_way(a, b):
+  new_list = [a[int(len(a)/2)], b[int(len(b)/2)]]
+  return new_list 
+
+# make_ends:
+def make_ends(nums):
+ new_list = [nums[0], nums[-1]]
+ return new_list
+
+# has23:
+def has23(nums):
+  for n in nums:
+    if n == 2 or n == 3:
+      return True
+  return False
+
 ### Logic-1:
 
 # cigar_party:
