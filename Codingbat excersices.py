@@ -28,6 +28,40 @@ def first_last6(nums):
     return True
   return False
 
+# same_first_last:
+def same_first_last(nums):
+  return len(nums) >= 1 and nums[0] == nums[-1]
+
+# make_pi:
+def make_pi():
+  return [3, 1, 4]
+
+# common_end: 
+def common_end(a, b):
+  return a[0] == b[0] or a[-1] == b[-1]
+
+# sum3:
+def sum3(nums):
+  return sum(nums)  
+
+# rotate_left3:
+def rotate_left3(nums):
+  return nums[1:] + [nums[0]]
+
+# reverse3:
+def reverse3(nums):
+  reversed_list = reversed(nums)
+  return list(reversed_list) 
+
+# sum2:
+def sum2(nums):
+  if len(nums) >= 2:
+    return nums[0] + nums[1]
+  elif len(nums) ==1:
+    return nums[0]
+  else:
+    return 0
+   
 ### Logic-1:
 
 # cigar_party:
