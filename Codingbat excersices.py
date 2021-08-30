@@ -1,5 +1,26 @@
 ### Warmup-1:
 
+# sleep_in:
+def sleep_in(weekday, vacation):
+  return not weekday or vacation
+ 
+# monkey_trouble:
+def monkey_trouble(a_smile, b_smile):
+  return (a_smile and b_smile) or (not a_smile and not b_smile)
+
+# sum_double:
+def sum_double(a, b):
+  if a == b:
+    return (a + b) * 2
+  return a + b  
+
+# diff21:
+def diff21(n):
+  if n > 21:
+    return abs(n - 21) * 2
+  else:
+    return abs(n - 21)
+
 # parrot_trouble:
 def parrot_trouble(talking, hour):
   if talking and (hour < 7 or hour > 20):
@@ -12,14 +33,86 @@ def makes10(a, b):
     return True
   return False
 
-# near_hundred
+# near_hundred:
 def near_hundred(n):
   if ((abs(100 - n) <= 10) or (abs(200 - n) <= 10)):
     return True
   return False
-  
-print(near_hundred(97))
 
+# pos_neg:
+# solution 1
+def pos_neg(a, b, negative):
+  if (a > 0 and b < 0 and negative == False):
+    return True
+  elif (a < 0 and b > 0 and negative == False):
+    return True
+  elif negative == True and (a < 0 and b < 0):
+    return True
+  else:
+    return False
+
+# solution 2 
+def pos_neg(a, b, negative):
+  if negative:
+   return (a < 0 and b < 0)
+  else:
+    return ((a > 0 and b < 0) or (a < 0 and b > 0)) 
+
+# not_string:
+def not_string(str):
+  word_list = str.split()
+  if word_list[0] == "not":
+    return str
+  return "not " + str
+
+# missing_char:
+# solution 1
+def missing_char(str, n):
+  lst = list(str)
+  lst.pop(n)
+  return "".join(lst)
+
+# solution 2
+def missing_char(str, n):
+  front = str[:n]
+  back = str[n+1:]
+  return front + back
+
+# front_back:
+def front_back(str):
+  if len(str) < 2:
+    return str
+  return str[-1] + str[1:-1] + str[0]
+
+# front3:
+def front3(str):
+  front = str[0:3] * 3
+  return front
+
+### Warmup-2:
+
+# string_times:
+# solution 1
+def string_times(str, n):
+  return str * n
+
+# solution 2
+def string_times(str, n):
+  result = ""
+  for i in range(n):
+    result += str 
+  return result
+
+# front_times:
+def front_times(str, n):
+  front = str[0:3] * n
+  return front 
+
+# string_bits:
+def string_bits(str):
+  new_str = str[0:20:2]
+  return new_str
+    
 ### List-1:
 
 # first_last6: 
