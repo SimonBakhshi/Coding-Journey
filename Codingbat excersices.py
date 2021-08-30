@@ -42,11 +42,11 @@ def near_hundred(n):
 # pos_neg:
 # solution 1
 def pos_neg(a, b, negative):
-  if (a > 0 and b < 0 and negative == False):
+  if ((a > 0 and b < 0) and (negative == False)):
     return True
-  elif (a < 0 and b > 0 and negative == False):
+  elif ((a < 0 and b > 0) and (negative == False)):
     return True
-  elif negative == True and (a < 0 and b < 0):
+  elif ((negative == True) and (a < 0 and b < 0)):
     return True
   else:
     return False

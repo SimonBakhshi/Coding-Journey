@@ -45,7 +45,7 @@ print(most_popular1)
 print(most_popular2)
 print(most_popular3)
 
-# Creating TripPlanner v1.0
+# Creating TripPlanner v1.0:
 def trip_planner_welcome(name):
   print("Welcome to tripplanner v1.0 " + name)
 
@@ -64,12 +64,6 @@ trip_planner_welcome("Simon ")
 estimate = estimated_time_rounded(10.77)
 destination_setup(" Silkeborg ", "København ", estimate, "Car")
 
-# Variables 
-train_mass = 22680
-train_acceleration = 10
-train_distance = 100
-bomb_mass = 1
-
 # Creating Fahrenheit to celsius and celsius to fahrenheit converteres: 
 def f_to_c(f_temp):
   c_temp = (f_temp -32) * 5/9
@@ -86,6 +80,12 @@ c0_in_fahrenheit = c_to_f(37)
 print(c0_in_fahrenheit)
 
 # Creating a function which multiplies mass and acceleration:
+# Variables 
+train_mass = 22680
+train_acceleration = 10
+train_distance = 100
+bomb_mass = 1
+
 def get_force(mass, acceleration):
   mass_times_acceleration = mass * acceleration
   return mass_times_acceleration
@@ -186,7 +186,7 @@ print(always_false(0))
 print(always_false(-1))
 print(always_false(1))
 
-# Creating a function which depending on a movies rating reccomends it to them or tells people to avoid it:
+# Creating a function which depending on a movies rating recommends it to people or tells them to avoid it:
 def movie_review(rating):
   if rating <= 5:
     return "Avoid at all costs!"
@@ -319,6 +319,38 @@ def add_greetings(names):
    
 print(add_greetings(["Owen", "Max", "Sophie", "Joe"]))
 
+# This function uses a for loop to iterate through a list checking whether the number at the given index is even or odd. The for loop continues to iterate through the list until it encounter a odd number. The function then returns the list from the odd number till its end, including the index of the odd number itself.
+def delete_starting_evens(lst):
+  for i, n in enumerate(lst):
+    if n % 2 == 0:
+      continue
+    else:
+      return lst[i:]
+  return []
+
+print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
+print(delete_starting_evens([4, 8, 10]))
+
+# This function uses a for loop to iterate through a list. If the index number in the list is odd it appends the element/value at the odd index number to a new list named lst2, and returns lst2:
+def odd_indices(lst):
+  lst2 = []
+  for i, e in enumerate(range(len(lst))):
+    if i % 2 == 1:
+      lst2.append(lst[e])
+  return lst2
+  
+print(odd_indices([4, 3, 7, 10, 11, -2]))
+
+# This function uses two nested for loops to iterate through the bases list of numbers and powers list of numbers. It then returns the result of every number in bases raised to every number in powers in a list called result:  
+def exponents(bases, powers):
+  result = []
+  for b in bases:
+    for p in powers:
+     result.append(b ** p)
+  return result 
+
+print(exponents([2, 3, 4], [1, 2, 3]))
+
 # This function takes a number as a input value. It uses the try and exception handling to deal with possible problems with the program, if the users input isn't compatible with the function. Regardless whether the user enters a even or odd number, the function returns a sequence of numbers until it reaches the number one. Sooner or later the sequence will arrive at the number 1. This i due to the math used in the function. Even mathematicians aren't sure why it is the case:  
 import sys
 
@@ -339,16 +371,3 @@ except KeyboardInterrupt:
   sys.exit()
 except ValueError:
   print("The program only accepts a positive integer my friend.")
-
-
-# #####
-# def delete_starting_evens(lst):
-#   for i, n in enumerate(lst):
-#     if n % 2 == 0:
-#       continue
-#     else:
-#       return lst[i:]
-#   return []
-
-# print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
-# print(delete_starting_evens([4, 8, 10]))

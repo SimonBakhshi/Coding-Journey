@@ -20,15 +20,12 @@ first_3 = inventory[:3]
 inventory.count("twin bed")
 twin_beds = inventory.count("twin bed")
 
-
 # Removing item from inventory
 inventory.pop(-14)
 removed_item = inventory.pop(-14)
 
-
 # Adding item to inventory list
 inventory.insert(10, "19th Century Bed Frame")
-
 
 # Sorting inventory
 sorted_list = sorted(inventory)
