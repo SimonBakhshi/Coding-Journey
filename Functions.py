@@ -199,7 +199,8 @@ print(movie_review(9))
 print(movie_review(4))
 print(movie_review(6))
 
-# Writing a function which compares the 3 numbers in the function def max_num(num1, num2, num3): and returns which number is the greater number. If there is a tie it returns "It's a tie!":
+# Writing a function which compares the 3 numbers in the function def max_num(num1, num2, num3): and returns which number is the greater number. 
+# If there is a tie it returns "It's a tie!":
 def max_num(num1, num2, num3):
   if num1 > num2 and num1 > num3:
     return num1
@@ -222,7 +223,8 @@ def append_size(lst):
 
 print(append_size([23, 42 ,67]))
 
-# This function adds the last two index values of lst together and appends the value to itself. It repeats the operation 2 more times and appends the calculated value of lst[-1] + lst[-2] to itself:
+# This function adds the last two index values of lst together and appends the value to itself. 
+# It repeats the operation 2 more times and appends the calculated value of lst[-1] + lst[-2] to itself:
 def append_sum (lst):
   lst.append(lst[-1] + lst[-2])
   lst.append(lst[-1] + lst[-2])
@@ -231,7 +233,8 @@ def append_sum (lst):
   
 print(append_sum([1, 1, 2]))
 
-# This function returns the last index [-1] of the list which contains more elements. If both lists are equal in size it retuns the last index value of lst1:
+# This function returns the last index [-1] of the list which contains more elements. 
+# If both lists are equal in size it retuns the last index value of lst1:
 def larger_list(lst1, lst2):
   if len(lst1) >= len(lst2):
     return lst1[-1]
@@ -240,7 +243,8 @@ def larger_list(lst1, lst2):
 
 print(larger_list([4, 10, 2, 5], [-10, 2, 5, 10]))
 
-# This function counts the number of times the parameter item e.g. (Werthers orginal candy) appears on lst. It compares whether the count is greater than the value n e.g. (n = 3) and returns the answer in Boolean values:    
+# This function counts the number of times the parameter item e.g. (Werthers orginal candy) appears on lst. 
+# It compares whether the count is greater than the value n e.g. (n = 3) and returns the answer in Boolean values:    
 def more_than_n(lst, item, n):
   if lst.count(item) > n:
     return True
@@ -269,7 +273,8 @@ def remove_middle(lst, start, end):
   
 print(remove_middle([4, 8, 15, 16, 23, 42], 1, 3))
 
-# This function counts the parameters item1 and item2 and compares which of the parameters appears on the list most times. It returns the parameter which shows up most times. If the parameters appear the same number of times the function returns the parameter item1: 
+# This function counts the parameters item1 and item2 and compares which of the parameters appears on the list most times. 
+# It returns the parameter which shows up most times. If the parameters appear the same number of times the function returns the parameter item1: 
 def more_frequent_item(lst, item1, item2):
   if lst.count(item1) >= lst.count(item2):
     return item1
@@ -278,7 +283,8 @@ def more_frequent_item(lst, item1, item2):
     
 print(more_frequent_item([2, 3, 3, 2, 3, 2, 3, 2, 3], 2, 3))
 
-# This function checks if the index value is invalid compared with lst's length. If thats the case it returns lst. Otherwise it returns a new list called lst2 where the index parameter in the function is multiplied by 2: 
+# This function checks if the index value is invalid compared with lst's length. If thats the case it returns lst. 
+# Otherwise it returns a new list called lst2 where the index parameter in the function is multiplied by 2: 
 def double_index(lst, index):
   if index >= len(lst):
     return lst
@@ -290,7 +296,9 @@ def double_index(lst, index):
     
 print(double_index([3, 8, -10, 12], 2))
 
-# This function finds the middle item from a list of values. this differs depending on whether there are an odd or even number of values on the list. If the list contain an odd number of elements the function returns the exact middle value of the list. If the list is even it returns the average of the middle two elements of the list:   
+# This function finds the middle item from a list of values. This differs depending on whether there are an odd or even number of values on the list. 
+# If the list contain an odd number of elements the function returns the exact middle value of the list. 
+# If the list is even it returns the average of the middle two elements of the list:   
 def middle_element(lst):
   if len(lst) % 2 == 0:
      sum = lst[int(len(lst)/2)] + lst[int(len(lst)/2) -1]
@@ -300,7 +308,8 @@ def middle_element(lst):
 
 print(middle_element([5, 2, -10, -4, 4, 5,]))
 
-# This function loops through the parameter nums and checks whether the numbers in nums are divisible with 10. For every number divisible by 10 the counter is incremented. The function returns the count of how many numbers in nums are divisible by 10:
+# This function loops through the parameter nums and checks whether the numbers in nums are divisible with 10. 
+# For every number divisible by 10 the counter is incremented. The function returns the count of how many numbers in nums are divisible by 10:
 def divisible_by_ten(nums):
   count = 0
   for number in nums:
@@ -319,7 +328,9 @@ def add_greetings(names):
    
 print(add_greetings(["Owen", "Max", "Sophie", "Joe"]))
 
-# This function uses a for loop to iterate through a list checking whether the number at the given index is even or odd. The for loop continues to iterate through the list until it encounter a odd number. The function then returns the list from the odd number till its end, including the index of the odd number itself.
+# This function uses a for loop to iterate through a list checking whether the number at the given index is even or odd. 
+# The for loop continues to iterate through the list until it encounter a odd number. 
+# The function then returns the list from the odd number till its end, including the index of the odd number itself.
 def delete_starting_evens(lst):
   for i, n in enumerate(lst):
     if n % 2 == 0:
@@ -331,7 +342,8 @@ def delete_starting_evens(lst):
 print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
 print(delete_starting_evens([4, 8, 10]))
 
-# This function uses a for loop to iterate through a list. If the index number in the list is odd it appends the element/value at the odd index number to a new list named lst2, and returns lst2:
+# This function uses a for loop to iterate through a list. 
+# If the index number in the list is odd it appends the element/value at the odd index number to a new list named lst2, and returns lst2:
 def odd_indices(lst):
   lst2 = []
   for i, e in enumerate(range(len(lst))):
@@ -341,7 +353,8 @@ def odd_indices(lst):
   
 print(odd_indices([4, 3, 7, 10, 11, -2]))
 
-# This function uses two nested for loops to iterate through the bases list of numbers and powers list of numbers. It then returns the result of every number in bases raised to every number in powers in a list called result:  
+# This function uses two nested for loops to iterate through the bases list of numbers and powers list of numbers. 
+# It then returns the result of every number in bases raised to every number in powers in a list called result:  
 def exponents(bases, powers):
   result = []
   for b in bases:
@@ -351,7 +364,105 @@ def exponents(bases, powers):
 
 print(exponents([2, 3, 4], [1, 2, 3]))
 
-# This function takes a number as a input value. It uses the try and exception handling to deal with possible problems with the program, if the users input isn't compatible with the function. Regardless whether the user enters a even or odd number, the function returns a sequence of numbers until it reaches the number one. Sooner or later the sequence will arrive at the number 1. This i due to the math used in the function. Even mathematicians aren't sure why it is the case:  
+# This function uses a for loop to sum the numbers in both lst1 and lst2. 
+# It compares the total sum of both lists with eachother and returns the list with the greater total sum. 
+# If the total sum of both lists are equal the function returns lst1: 
+def larger_sum(lst1, lst2):
+  lst1_sum = 0
+  lst2_sum = 0
+  for n in lst1:
+    lst1_sum += n
+  for n in lst2:
+    lst2_sum += n
+  if lst1_sum >= lst2_sum:
+    return lst1 
+  else:
+    return lst2
+
+ # Another solution to the same problem above:
+ def larger_sum(lst1, lst2):
+  if sum(lst1) >= sum(lst2):
+    return lst1
+  return lst2
+    
+print(larger_sum([1, 9, 5], [2, 3, 7]))
+
+# This function uses a for loop to sum the numbers in a list. 
+# A break statement is applied to exit the loop when the count of the numbers in lst reaches or exceeds 9000. 
+# This will continue to execute the code outside of the loop, which in this case, returns the sum that reached or exceeded 9000. 
+# If the list argument is an empty list the function returns 0:
+def over_nine_thousand(lst):
+  lst_sum = 0
+  for n in lst:
+    lst_sum += n
+    if lst_sum >= 9000:
+      break
+  return lst_sum
+
+print(over_nine_thousand([8000, 900, 120, 5000]))
+
+# This function uses a for loop to iterate through a list of numbers. 
+# It checks whether the numbers encountered are greater than another list only containing one number. 
+# If a number in nums are greater than the number in greatest_num, the function breaks out of the loop and returns the new greatest number:   
+def max_num(nums):
+  greatest_num = nums[0]
+  for n in nums:
+    if n > greatest_num:
+      break
+  return n
+
+# Another solution to the same problem. This function keeps replacing the greatest number encountered with an ealier encountered greatest number. 
+# The function above breaks out of the loop when it through its iterations meets a number which is greater than the starting greatest_number. 
+# This function on the other hand, keeps iterating through all the numbers in the list. 
+# It replaces the greatest number every time it meets a number which is greater than the previous greatest number. 
+# Hence it iterates though all the numbers in the list. 
+# Whereas the other function breaks out as soon as it encounters the first number greater than the default greatest number:
+def max_num(nums):
+  greatest_num = nums[0]
+  for n in nums:
+    if n > greatest_num:
+      greatest_num = n
+  return greatest_num
+
+print(max_num([50, -10, 0, 75, 20]))
+
+# This function checks whether the values at the same indices in lst1 and lst2 are equal. 
+# If so it appends the indices to a list variable called matching_indices and returns the list:  
+def same_values(lst1, lst2):
+  matching_indices = []
+  for i in range(len(lst1)):
+    if lst1[i] == lst2[i]: 
+     matching_indices.append(i)
+  return matching_indices
+  
+print(same_values([5, 1, -10, 3, 3], [5, 10, -10, 3, 5]))
+
+# This function checks wheter the second list is the reverse of the first list. It uses a loop to compare if the index value of the inverse list are equal or not.  
+# Now in order to get the inverse of the position we are at in the first list, we subtract the index we are at from the end of the second list. 
+# So on the first pass, we’ll compare the element at position 0 to the element at position 5 - 1 - 0 = 4. 
+# On the next pass, we’ll compare the element at position 1 to the element at position 5 - 1 - 1 = 3, and so on.
+# If any of the index values are not equal then the second list aren't the reverse of the first and the function returns False. 
+# But if the function made it through the loop without a mismatch the lists are equal and the function retuns True:   
+def reversed_list(lst1, lst2):
+  for i in range(len(lst1)):
+    if lst1[i] != lst2[len(lst2) - 1 - i]:
+      return False
+  return True
+
+# Solution 2 uses slicing to compare if lst2 is the reverse of lst1:
+def reversed_list(lst1, lst2):
+    if lst1 == lst2[::-1]:
+      return True
+    else:
+      return False
+
+print(reversed_list([1, 2, 3], [3, 2, 1]))
+print(reversed_list([1, 5, 3], [3, 2, 1])) 
+
+# This function takes a number as a input value. 
+# It uses the try and exception handling to deal with possible problems with the program, if the users input isn't compatible with the function. 
+# Regardless whether the user enters a even or odd number, the function returns a sequence of numbers until it reaches the number one. 
+# Sooner or later the sequence will arrive at the number 1. This is due to the math used in the function. Even mathematicians aren't sure why it is the case:  
 import sys
 
 def collatz(number):
