@@ -112,7 +112,15 @@ def front_times(str, n):
 def string_bits(str):
   new_str = str[0:20:2]
   return new_str
-    
+
+# array_count9:
+def array_count9(nums):
+  count = 0
+  for n in nums:
+    if n == 9:
+      count += 1
+  return count 
+
 ### List-1:
 
 # first_last6: 

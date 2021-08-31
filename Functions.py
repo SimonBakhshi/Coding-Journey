@@ -457,7 +457,61 @@ def reversed_list(lst1, lst2):
       return False
 
 print(reversed_list([1, 2, 3], [3, 2, 1]))
-print(reversed_list([1, 5, 3], [3, 2, 1])) 
+print(reversed_list([1, 5, 3], [3, 2, 1]))
+
+# This function returns the input parameter in the tenth power:
+def tenth_power(num):
+  return num ** 10
+
+print(tenth_power(1))
+print(tenth_power(0))
+print(tenth_power(2))
+
+# This function calculates the square root of the input number and returns the result:
+def square_root(num):
+  return num ** 0.5
+
+print(square_root(16))
+print(square_root(100))
+
+# This function calculates a win percentage by adding the parameters wins and losses together and dividing the parameter wins with the variable total multiplied by 100: 
+def win_percentage(wins, losses):
+  total = wins + losses
+  return wins / total * 100
+  
+print(win_percentage(5, 5))
+print(win_percentage(10, 0))
+
+# This function calculates the average of the sum of two numbers. 
+# It adds the numbers together and divides the sum with the number of numbers added together, In this case two: 
+def average(num1, num2):
+  return (num1 + num2) / 2
+
+print(average(1, 100))
+print(average(1, -1))
+
+# This function calculates the remainder of two numbers while performing other mathematical operations on them. 
+# The numerator is multiplied by two and the denominator is divided by two. 
+# After the modification of the values the remainder is found by using the modulus calculus operator.
+def remainder(num1, num2):
+  return (num1 * 2) % (num2 / 2)
+
+print(remainder(15, 14))
+print(remainder(9, 6))
+
+# This function prints ot the first three results and returns the third:
+def first_three_multiples(num):
+  print(num)
+  print(num * 2)
+  print(num * 3)
+  return num * 3
+
+# This function calculates the percentage of the the parameter total: 
+def tip(total, percentage):
+  return (total * percentage) / 100
+
+print(tip(10, 25))
+print(tip(0, 100))
 
 # This function takes a number as a input value. 
 # It uses the try and exception handling to deal with possible problems with the program, if the users input isn't compatible with the function. 
