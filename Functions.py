@@ -513,6 +513,36 @@ def tip(total, percentage):
 print(tip(10, 25))
 print(tip(0, 100))
 
+# This function concatenates the parameters together with strings, in order to create a sentence with the arguments passed into the function:
+def introduction(first_name, last_name):
+  return last_name + ", " + first_name + " " + last_name
+
+print(introduction("James", "Bond"))
+print(introduction("Maya", "Angelou"))
+
+# This function calculates a dogs age in dog years. 
+# It concatenates the name parameter with strings and turns the dog years age calculation into a string in order to concatenate it:
+def dog_years(name, age):
+  return name + ", you are " + str(age * 7) + " years old in dog years" 
+
+print(dog_years("Lola", 16))
+print(dog_years("Baby", 0))
+
+# This function prints and stores the result of a + b and c - b. 
+# Then it multiplies the previously stored results together and stores and prints that result. 
+# Lastly it returns the third result modulus the parameter a: 
+def lots_of_math(a, b, c, d):
+  result_1 = a + b
+  result_2 = c - d
+  result_3 = result_1 * result_2
+  print(result_1)
+  print(result_2)
+  print(result_3)
+  return (result_3 % a)
+
+print(lots_of_math(1, 2, 3, 4))
+print(lots_of_math(1, 1, 1, 1))
+
 # This function takes a number as a input value. 
 # It uses the try and exception handling to deal with possible problems with the program, if the users input isn't compatible with the function. 
 # Regardless whether the user enters a even or odd number, the function returns a sequence of numbers until it reaches the number one. 
