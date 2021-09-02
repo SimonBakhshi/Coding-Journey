@@ -119,8 +119,67 @@ def array_count9(nums):
   for n in nums:
     if n == 9:
       count += 1
-  return count 
+  return count
 
+# array_front9:
+def array_front9(nums):
+  for n in nums:
+    if n == 9 in nums[0:4]:
+      return True
+  return False
+
+ # array123:
+ # Take a look at the excersice again! 
+
+### String-1:
+
+# hello_name:
+def hello_name(name):
+  return "Hello " + name + "!"
+
+# make_abba:
+def make_abba(a, b):
+  return a + b + b + a
+
+# make_tags:
+def make_tags(tag, word):
+  return "<" + tag + ">" + word + "</" + tag + ">"
+
+# make_out_word:
+def make_out_word(out, word):
+  return out[0:2] + word + out[2:4]
+
+# extra_end:
+def extra_end(str):
+  end = str[-2:]
+  return end + end + end
+
+# first_two:
+def first_two(str):
+  return str[:2]
+
+# first_half:
+def first_half(str):
+  return str[:len(str) / 2]
+
+# without_end:
+def without_end(str):
+  return str[1:-1]
+
+# combo_string:
+def combo_string(a, b):
+  if len(b) > len(a):
+    return a + b + a
+  return b + a + b
+
+# non_start:
+def non_start(a, b):
+  return a[1:] + b[1:]
+
+# left2:
+def left2(str):
+  return str[2:] + str[:2]
+ 
 ### List-1:
 
 # first_last6: 
@@ -199,6 +258,14 @@ def cigar_party(cigars, is_weekend):
     return True
   return False
 
+# date_fashion:
+def date_fashion(you, date):
+  if (you >= 8 and date > 2) or (date >= 8 and you > 2):
+    return 2
+  elif (you <= 2) or (date <= 2):
+    return 0
+  return 1
+
 # squirrel_play:
 def squirrel_play(temp, is_summer):
   if (temp >= 60 and temp <= 90):
@@ -243,5 +310,15 @@ def love6(a, b):
   diff_ab = a - b
   return ((sum_ab == 6 or abs(diff_ab) == 6) or (a == 6 or b == 6))
 
-print(love6(7, 1))
+# in1to10:
+def in1to10(n, outside_mode):
+  if (outside_mode == True) and (n <= 1 or n >= 10):
+    return True
+  elif (outside_mode == False) and (n >= 1 and n <= 10):
+    return True
+  return False
+
+# near_ten:
+def near_ten(num):
+  return num % 10 <= 2 or num % 10 >= 8  
   
