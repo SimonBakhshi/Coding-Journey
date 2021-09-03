@@ -321,4 +321,77 @@ def in1to10(n, outside_mode):
 # near_ten:
 def near_ten(num):
   return num % 10 <= 2 or num % 10 >= 8  
-  
+
+### Logic-2:
+
+# lone_sum: 
+def lone_sum(a, b, c):
+  if (a == b) and (b == c) and (a == c):
+    sum = 0
+  elif (a == b): 
+    sum = c  
+  elif (b == c):
+    sum = a  
+  elif (c == a):
+    sum = b 
+  else:
+    sum = (a + b + c)
+  return sum
+
+# lucky_sum:
+def lucky_sum(a, b, c):
+  if a == 13:
+    sum = 0
+  elif b == 13:
+    sum = a
+  elif c == 13:
+    sum = a + b
+  else:
+    sum = a + b + c
+  return sum
+    
+### String-2:
+
+# double_char:
+# solution 1
+def double_char(str):
+  return "".join(c + c for c in str)
+
+# solution 2
+def double_char(str):
+  string = ""
+  for c in str:
+    string += c + c
+  return string
+
+# solution 3
+def double_char(str):
+  string = ""
+  for i in range(len(str)):
+    string += str[i] + str[i]
+  return string
+
+# count_hi:
+# solution 1
+def count_hi(str):
+  return str.count("hi")
+
+# solution 2
+def count_hi(str):
+  count = 0
+  sub_string = "hi"
+  for i in range(len(str)-1):
+    if (str[i:i+2] == sub_string):
+      count += 1
+  return count
+
+# solution 3
+def count_hi(str):
+  count = 0
+  for i in range(len(str)-1):
+    if (str[i:i+2] == "hi"):
+      count += 1
+  return count  
+
+
+ 
