@@ -391,7 +391,31 @@ def count_hi(str):
   for i in range(len(str)-1):
     if (str[i:i+2] == "hi"):
       count += 1
-  return count  
+  return count
 
+# cat_dog:
+def cat_dog(str):
+  if str.count("cat") == str.count("dog"):
+    return True
+  return False
 
- 
+### List-2:
+
+# count_evens:
+def count_evens(nums):
+  count = 0
+  for num in nums:
+    if num % 2 == 0:
+      count += 1
+  return count
+  
+# big_diff:
+def big_diff(nums):
+  return max(nums) - min(nums)
+
+# centered_average:
+def centered_average(nums):
+  nums.pop(nums.index(max(nums)))
+  nums.pop(nums.index(min(nums)))
+  
+  return sum(nums) / len(nums)
