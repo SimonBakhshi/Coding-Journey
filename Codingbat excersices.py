@@ -419,3 +419,12 @@ def centered_average(nums):
   nums.pop(nums.index(min(nums)))
   
   return sum(nums) / len(nums)
+
+# sum13:
+def sum13(nums):
+  n = nums
+  while 13 in n:
+    wheres13 = n.index(13)
+    n = n[0:wheres13]+n[wheres13+2:]
+  return sum(n)
+      
