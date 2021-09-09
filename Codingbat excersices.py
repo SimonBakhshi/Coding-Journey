@@ -427,4 +427,21 @@ def sum13(nums):
     wheres13 = n.index(13)
     n = n[0:wheres13]+n[wheres13+2:]
   return sum(n)
+
+# sum67:
+def sum67(nums):
+  while 6 in nums:
+    index = nums.index(6)
+    if 7 in nums[index:]:
+      nums = nums[:index] + nums[index + nums[index:].index(7) + 1:]
+    else:
+      break
+  return sum(nums)
+
+# has22:
+def has22(nums):
+  for i in range(len(nums)-1):
+    if nums[i] == 2 and nums[i+1] == 2:
+      return True
+  return False 
       
