@@ -1,6 +1,6 @@
 game = [[1,0,0],
-        [1,1,0],
-        [2,0,1]]
+        [1,1,1],
+        [2,0,2]]
 
 def game_board(game_map, player=0, row=0, column=0, just_display=False):
     try:
@@ -34,7 +34,7 @@ def win(current_game):
     for ix in range(len(game)):
         diags.append(game[ix][ix])
     if diags.count(diags[0]) == len(diags) and diags[0] != 0:
-        print(f"player{diags[0]} is the winner horizontally (\\)!")
+        print(f"player{diags[0]} is the winner diagonally (\\)!")
 
     # Vertical win:
     for col in range(len(game)):
