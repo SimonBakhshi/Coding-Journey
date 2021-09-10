@@ -60,10 +60,9 @@ def game_board(game_map, player=0, row=0, column=0, just_display=False):
 play = True
 players = [1, 2]
 while play:
-    game = [[0,0,0],
-            [0,0,0],
-            [0,0,0]]
     
+    game_size = int(input("What size game of Tic tac toe do you want? "))
+    game = [[0 for i in range(game_size)] for i in range(game_size)]
     game_won = False
     game, _ = game_board(game, just_display=True)
     player_choice = itertools.cycle([1, 2])
