@@ -1,7 +1,7 @@
 import random
 
 name = ''
-question = 'Do i got a big one?'
+question = 'Will i become rich in the future?'
 answer = ''
 random_number = random.randint(1,12)
 # print(random_number)
@@ -30,7 +30,7 @@ elif random_number == 10:
 elif random_number == 11:
   answer = 'Mowgli Jones says so!'
 elif random_number == 12:
-  answer = 'John Travoltas is 8 inches bigger :)'
+  answer = 'According to John Travolta you will be a yacht owner :)'
 else:
   answer = 'Error'
 

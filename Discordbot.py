@@ -1,7 +1,7 @@
 import discord
 import random 
 
-token = "xxxxxxxx"
+token = "xxxxxxxxxxxxxx"
 
 client = discord.Client()
 
@@ -29,7 +29,7 @@ async def on_message(message):
             response = f"This is your random number: {random.randrange(1000000)}"
             await message.channel.send(response)
             return
-    
+        
     if user_message.lower() == "!anywhere":
         await message.channel.send("This can be used anywhere!")
         return 

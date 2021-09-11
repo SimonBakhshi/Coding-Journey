@@ -13,7 +13,11 @@ for i in range(game_size):
   game.append(row)
 print(game)'''
 
-game_size = int(input("What size game of Tic tac toe do you want? "))
+'''game_size = int(input("What size game of Tic tac toe do you want? "))
 game = [[0 for i in range(game_size)] for i in range(game_size)]
-print(game)
+print(game)'''
 
+
+x = [[0, 0, 0], [0, 0, 0],[0, 0, 0]]
+x[1][2] = 9
+print(x)
