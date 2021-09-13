@@ -1,5 +1,6 @@
 import discord
 import random
+from discord import channel
 from discord.ext import commands 
 
 client = commands.Bot(command_prefix = ".")
@@ -36,6 +37,9 @@ async def _8ball(ctx, *, question):
                 "Very doubtful."]
     await ctx.send(f"Question: {question}\nAnswer: {random.choice(responses)}")
 
+@client.command()
+async def clear(ctx, amount=5):
+    await ctx.channel.purge(limit=amount)
 
 @client.event
 async def on_member_join(member):
@@ -46,4 +50,4 @@ async def on_member_remove(member):
     print(f"{member} has left a server")
 
 
-client.run("xxxxxxxxxxxxxxxxx")
+client.run("xxxxxxxxxxxx")
