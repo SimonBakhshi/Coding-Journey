@@ -324,6 +324,15 @@ def near_ten(num):
 
 ### Logic-2:
 
+# make_bricks:
+def make_bricks(small, big, goal):
+  if goal % 5 <= small: 
+    if goal // 5 <= big:
+      return True
+    if goal <= big * 5 + small:
+      return True
+  return False
+
 # lone_sum: 
 def lone_sum(a, b, c):
   if (a == b) and (b == c) and (a == c):
