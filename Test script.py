@@ -18,6 +18,13 @@ game = [[0 for i in range(game_size)] for i in range(game_size)]
 print(game)'''
 
 
-x = [[0, 0, 0], [0, 0, 0],[0, 0, 0]]
+'''x = [[0, 0, 0], [0, 0, 0],[0, 0, 0]]
 x[1][2] = 9
-print(x)
+print(x)'''
+
+def password_generator(username):
+  password = ""
+  for i in range(username[0:len(username)]):
+    return i
+
+print(password_generator("Joeymoe"))
