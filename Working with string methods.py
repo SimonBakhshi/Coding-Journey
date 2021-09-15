@@ -43,3 +43,56 @@ love_maybe_full = "\n".join(love_maybe_lines_stripped)
 
 print(love_maybe_full)
 
+# .replace()
+toomer_bio = \
+"""
+Nathan Pinchback Tomer, who adopted the name Jean Tomer early in his literary career, was born in Washington, D.C. in 1894. Jean is the son of Nathan Tomer was a mixed-race freedman, born into slavery in 1839 in Chatham County, North Carolina. Jean Tomer is most well known for his first book Cane, which vividly portrays the life of African-Americans in southern farmlands.
+"""
+toomer_bio_fixed = toomer_bio.replace("Tomer","Toomer")
+print(toomer_bio_fixed)
+
+# .find()
+god_wills_it_line_one = "The very earth will disown you"
+
+disown_placement = god_wills_it_line_one.find("disown")
+print(disown_placement)
+
+# .format()
+def poem_title_card(title, poet):
+  return "The poem \"{}\" is written by {}.".format(title, poet)
+
+print(poem_title_card("I Hear America Singing", "Walt Whitman"))
+
+def poem_description(publishing_date, author, title, original_work):
+  poem_desc = "The poem {title} by {author} was originally published in {original_work} in {publishing_date}.".format(publishing_date=publishing_date, author=author, title=title, original_work=original_work)
+  return poem_desc
+
+my_beard_description = poem_description(author = "Shel Silverstein", title = "My Beard", original_work = "Where the Sidewalk Ends", publishing_date = "1974")
+
+# .split(), .strip(), .format()
+highlighted_poems = "Afterimages:Audre Lorde:1997,  The Shadow:William Carlos Williams:1915, Ecstasy:Gabriela Mistral:1925,   Georgia Dusk:Jean Toomer:1923,   Parting Before Daybreak:An Qi:2014, The Untold Want:Walt Whitman:1871, Mr. Grumpledump's Song:Shel Silverstein:2004, Angel Sound Mexico City:Carmen Boullosa:2013, In Love:Kamala Suraiyya:1965, Dream Variations:Langston Hughes:1994, Dreamwood:Adrienne Rich:1987"
+
+highlighted_poems_list = highlighted_poems.split(',')
+
+highlighted_poems_stripped = []
+
+for poem in highlighted_poems_list:
+  highlighted_poems_stripped.append(poem.strip())
+
+highlighted_poems_details = []
+
+for poem in highlighted_poems_stripped:
+  highlighted_poems_details.append(poem.split(':'))
+
+titles = []
+poets = []
+dates = []
+
+for poem in highlighted_poems_details:
+  titles.append(poem[0])
+  poets.append(poem[1])
+  dates.append(poem[2])
+  
+for i in range(len(highlighted_poems_details)):
+  print("The poem {} was published by {} in {}.".format(titles[i], poets[i], dates[i])) 
+
