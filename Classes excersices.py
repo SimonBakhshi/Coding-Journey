@@ -86,6 +86,12 @@ class Student:
   def add_grade(self, grade):
     if type(grade) is Grade:
       self.grades.append(grade)
+    
+  def get_average(self):
+    value = 0
+    for grade in self.grades:
+      value += grade
+    return value / len(self.grades)
 
 class Grade:
   minimum_passing = 65
@@ -96,3 +102,4 @@ roger = Student("Roger van der Weyden", 10)
 sandro = Student("Sandro Botticelli", 12)
 pieter = Student("Pieter Bruegel the Elder", 8)
 pieter.add_grade(Grade(100))
+print(Student.get_average())
